@@ -77,7 +77,7 @@ namespace DefaultCompany.Test
                             // ex) assets/scenes/menu.unity -> menu 
                             var tail = name.Substring(name.LastIndexOf('/') + 1);
                             var result = tail.Substring(0, tail.LastIndexOf('.'));
-                            builder.AppendIndentFormatLine(indentCount, "public const string {0} = @\"{1}\";", Com.MakeIdentifier(name), Com.EscapeDoubleQuote(name));
+                            builder.AppendIndentFormatLine(indentCount, "public const string {0} = @\"{1}\";", Com.MakeIdentifier(result), Com.EscapeDoubleQuote(name));
                         }
                     }
                 }
